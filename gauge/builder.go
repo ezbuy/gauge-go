@@ -7,13 +7,32 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"text/template"
+	"time"
 
 	"github.com/getgauge-contrib/gauge-go/constants"
 	"github.com/getgauge-contrib/gauge-go/util"
 	"github.com/getgauge/common"
 )
+
+func exists(path string) bool {
+	if _, err := os.Stat(path); os.IsNotExist(err) {
+		return false
+	}
+	return true
+}
+
+func getTempDir() string {
+	projectRoot := os.Getenv(common.GaugeProjectRootEnv)
+	tempGaugeDir := filepath.Join(projectRoot, "gauge_temp")
+	tempGaugeDir += strconv.FormatInt(time.Now().UnixNano(), 10)
+	if !exists(tempGaugeDir) {
+		os.MkdirAll(tempGaugeDir, 0755)
+	}
+	return tempGaugeDir
+}
 
 // LoadGaugeImpls builds the go project and runs the generated go file,
 // so that the gauge specific implementations get scanned
@@ -32,7 +51,7 @@ func LoadGaugeImpls() error {
 		fmt.Printf("Failed to get the list of all packages: %s\n%s", err.Error(), b.String())
 	}
 
-	tempDir := common.GetTempDir()
+	tempDir := getTempDir()
 	defer os.RemoveAll(tempDir)
 
 	gaugeGoMainFile := filepath.Join(tempDir, constants.GaugeTestFileName)
