@@ -18,8 +18,8 @@
         "maximum": ""
     },
     "postInstall": {
-        "windows": ["go", "get", "github.com/getgauge-contrib/gauge-go"],
-        "linux": ["go", "get", "github.com/getgauge-contrib/gauge-go"],
-        "darwin": ["go", "get", "github.com/getgauge-contrib/gauge-go"]
+        "windows": ["go", "get", "github.com/ezbuy/gauge-go"],
+        "linux": ["go", "get", "github.com/ezbuy/gauge-go"],
+        "darwin": ["go", "get", "github.com/ezbuy/gauge-go"]
     }
 }

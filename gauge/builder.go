@@ -12,8 +12,8 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/getgauge-contrib/gauge-go/constants"
-	"github.com/getgauge-contrib/gauge-go/util"
+	"github.com/ezbuy/gauge-go/constants"
+	"github.com/ezbuy/gauge-go/util"
 	"github.com/getgauge/common"
 )
 
@@ -88,7 +88,7 @@ var gaugeTestRunnerTpl = template.Must(template.New("main").Parse(
 	`package gauge_test_bootstrap
 import (
 	"os"
-	"github.com/getgauge-contrib/gauge-go/gauge"
+	"github.com/ezbuy/gauge-go/gauge"
 {{range $n, $i := .Imports}}	_ "{{$i}}"
 {{end}})
 func init() {

@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/getgauge-contrib/gauge-go/constants"
-	"github.com/getgauge-contrib/gauge-go/gauge"
+	"github.com/ezbuy/gauge-go/constants"
+	"github.com/ezbuy/gauge-go/gauge"
 	"github.com/getgauge/common"
 )
 

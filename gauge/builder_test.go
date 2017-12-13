@@ -20,7 +20,7 @@ github.com/apoorvam/foo/stepImpl/impl`
 	expected := `package gauge_test_bootstrap
 import (
 	"os"
-	"github.com/getgauge-contrib/gauge-go/gauge"
+	"github.com/ezbuy/gauge-go/gauge"
 	_ "github.com/apoorvam/foo/stepImpl"
 	_ "github.com/apoorvam/foo/stepImpl/impl"
 )
