@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/getgauge-contrib/gauge-go",
+	"ImportPath": "github.com/ezbuy/gauge-go",
 	"GoVersion": "go1.6",
 	"Deps": [
 		{

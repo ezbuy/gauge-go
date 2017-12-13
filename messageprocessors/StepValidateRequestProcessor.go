@@ -1,8 +1,8 @@
 package messageprocessors
 
 import (
-	gm "github.com/getgauge-contrib/gauge-go/gauge_messages"
-	t "github.com/getgauge-contrib/gauge-go/testsuit"
+	gm "github.com/ezbuy/gauge-go/gauge_messages"
+	t "github.com/ezbuy/gauge-go/testsuit"
 )
 
 type StepValidateRequestProcessor struct{}

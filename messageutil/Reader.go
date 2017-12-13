@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net"
 
-	c "github.com/getgauge-contrib/gauge-go/constants"
-	m "github.com/getgauge-contrib/gauge-go/gauge_messages"
+	c "github.com/ezbuy/gauge-go/constants"
+	m "github.com/ezbuy/gauge-go/gauge_messages"
 	"github.com/golang/protobuf/proto"
 )
 

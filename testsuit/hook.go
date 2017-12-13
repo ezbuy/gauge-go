@@ -3,7 +3,7 @@ package testsuit
 import (
 	"reflect"
 
-	m "github.com/getgauge-contrib/gauge-go/gauge_messages"
+	m "github.com/ezbuy/gauge-go/gauge_messages"
 )
 
 type HookType int

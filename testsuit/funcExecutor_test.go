@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/getgauge-contrib/gauge-go/constants"
+	"github.com/ezbuy/gauge-go/constants"
 	"github.com/stretchr/testify/assert"
 )
 

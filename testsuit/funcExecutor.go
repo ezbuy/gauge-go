@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/getgauge-contrib/gauge-go/constants"
-	m "github.com/getgauge-contrib/gauge-go/gauge_messages"
-	"github.com/getgauge-contrib/gauge-go/util"
+	"github.com/ezbuy/gauge-go/constants"
+	m "github.com/ezbuy/gauge-go/gauge_messages"
+	"github.com/ezbuy/gauge-go/util"
 	"github.com/getgauge/common"
 )
 
