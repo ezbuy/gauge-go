@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/ezbuy/gauge-go/constants"
 	"github.com/ezbuy/gauge-go/gauge"
@@ -67,8 +68,16 @@ func setPluginAndProjectRoots() {
 		os.Exit(1)
 	}
 
-	goSrcPath := filepath.Join(os.Getenv("GOPATH"), "src")
-	if !filepath.HasPrefix(projectRoot, goSrcPath) {
+	goPaths := strings.Split(os.Getenv("GOPATH"), ":")
+	inGoPath := false
+	for _, goPath := range goPaths {
+		goSrcPath := filepath.Join(goPath, "src")
+		if filepath.HasPrefix(projectRoot, goSrcPath) {
+			inGoPath = true
+			break
+		}
+	}
+	if !inGoPath {
 		fmt.Printf("Project folder must be a subfolder in GOPATH/src folder\n")
 		os.Exit(1)
 	}
