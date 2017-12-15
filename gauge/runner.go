@@ -217,6 +217,7 @@ func Run() {
 			return
 		}
 		msgToSend := processor.Process(msg, context)
+		msgToSend.MessageId = msg.MessageId
 
 		mu.WriteGaugeMessage(msgToSend, conn)
 	}
